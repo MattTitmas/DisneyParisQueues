@@ -28,6 +28,5 @@ def main():
     bucket.blob('queue_times.csv').upload_from_string(combined_df.to_csv(index=False), 'text/csv')
 
 
-
 if __name__ == '__main__':
     main()
