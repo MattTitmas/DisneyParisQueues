@@ -1,8 +1,8 @@
 ARG PYTHON_VERSION=3.10.7
 FROM python:${PYTHON_VERSION}
 
-ADD main.py /
-ADD requirements.txt /
+WORKDIR /app
+ADD . /app
 
 RUN pip install -r requirements.txt
 
