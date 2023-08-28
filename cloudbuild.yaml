@@ -3,5 +3,6 @@ steps:
   args: ['functions',
          'deploy',
          'UpdateDisneyQueues',
+         '--trigger-http',
          '--runtime', 'Python 3.11',
          '--entry-point', 'main']
