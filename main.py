@@ -3,7 +3,7 @@ from google.cloud import storage
 import requests
 
 
-def main(*args, **kwargs):
+def UpdateDisneyQueues(*args, **kwargs):
     client = storage.Client()
     bucket = client.get_bucket('bucket_queues')
 
