@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions',
+         'deploy',
+         'UpdateDisneyQueues',
+         '--runtime', 'Python 3.11',
+         '--entry-point', 'main']

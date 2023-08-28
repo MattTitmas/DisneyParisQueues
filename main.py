@@ -3,7 +3,7 @@ from google.cloud import storage
 import requests
 
 
-def main():
+def main(*args, **kwargs):
     client = storage.Client()
     bucket = client.get_bucket('bucket_queues')
 
@@ -26,6 +26,7 @@ def main():
     combined_df = pd.concat([df, new_df])
 
     bucket.blob('queue_times.csv').upload_from_string(combined_df.to_csv(index=False), 'text/csv')
+    return "Complete"
 
 
 if __name__ == '__main__':
